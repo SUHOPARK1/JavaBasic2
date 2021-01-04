@@ -1,7 +1,15 @@
 package hello;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import static java.util.stream.Collectors.toList;
+import java.util.stream.Collectors;
+
 public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!!!!");
+    public String main() {
+        return Arrays.asList(new String[] { "Hello, ", "World ", "!!!!" }).stream().map(i -> String.valueOf(i))
+                .collect(Collectors.joining());
     }
+
 }
